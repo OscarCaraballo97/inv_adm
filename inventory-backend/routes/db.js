@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db'); // ✅ Usa directamente db
+const db = require('../config/db');
 
-// POST /api/materiales/salida
+
 router.post('/salida', (req, res) => {
   const { id, cantidad } = req.body;
 
@@ -35,7 +35,7 @@ router.post('/salida', (req, res) => {
   });
   db.query('SELECT 1 + 1 AS resultado', (err, rows) => {
     if (err) throw err;
-    console.log('Resultado test DB:', rows[0].resultado); // debería imprimir 2
+    console.log('Resultado test DB:', rows[0].resultado);
   });
 });
 

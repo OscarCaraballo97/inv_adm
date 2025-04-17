@@ -60,7 +60,7 @@ export class HomePage {
     this.materialService.registrarSalida(id, cantidad, this.responsable).subscribe({
       next: (res: any) => {
         alert('Salida registrada correctamente');
-        this.cargarMateriales(); // recarga materiales con cantidades actualizadas
+        this.cargarMateriales();
         this.cantidades[id] = 0;
       },
       error: (err: any) => {
